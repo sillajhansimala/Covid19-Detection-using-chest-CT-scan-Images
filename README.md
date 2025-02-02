@@ -14,25 +14,27 @@ PyTorch (Deep Learning Framework)
 ResNet18 (Pre-trained CNN Model)
 HTML, CSS, JavaScript (Frontend)
 
-📂 Project Structure
+## 📂 Project Structure (Step-by-Step)
 
-Covid19-detection-using-chest-images/
-│-- backend/
-│   ├── app.py  # Flask backend to handle requests
-│   ├── load model.py  # Loads and defines the CNN model
-│   ├── preprocess.py  # Preprocesses input images
-│   ├── model_weights.yaml  # Model weights for ResNet18
-│   ├── model.pkl # Serialized model for deployment
-│-- frontend/
-│   ├── index.html  # Frontend UI
-│   ├── scripts.js  # JavaScript functionality
-│   ├── styles.css  # Styling for the frontend
-│-- dataset/
-│   ├── images/  # Raw CT scan images
-│   ├── preprocessed_images/  # Processed images
-│   ├── split/  # Images split into test, tarin and val
-│-- README.md  # Project Documentation
+### 1. Backend Setup (`backend/`)
+- **`app.py`**: This file contains the Flask backend code responsible for handling incoming requests and routing them to appropriate functions.
+- **`load_model.py`**: This script loads and defines the CNN model (ResNet18) used for classification.
+- **`preprocess.py`**: This file contains the code to preprocess input images, making them suitable for feeding into the model.
+- **`model_weights.yaml`**: This file contains the pre-trained weights for the ResNet18 model.
+- **`model.pkl`**: This serialized file contains the trained model that can be loaded for deployment.
 
+### 2. Frontend Setup (`frontend/`)
+- **`index.html`**: This is the main HTML file that defines the structure of the frontend user interface (UI).
+- **`scripts.js`**: This JavaScript file contains the necessary code to handle the logic and user interactions for the frontend.
+- **`styles.css`**: This file includes the CSS styles for designing the frontend to improve user experience.
+
+### 3. Dataset Preparation (`dataset/`)
+- **`images/`**: This folder contains the raw CT scan images used for training and testing the model.
+- **`preprocessed_images/`**: This folder contains images that have been preprocessed, ready to be used for training or testing.
+- **`split/`**: This folder contains images split into different datasets—`train/`, `test/`, and `val/` (validation) for model evaluation.
+
+### 4. Project Documentation
+- **`README.md`**: This file contains the documentation for the project, explaining the purpose, setup instructions, technologies used, and future improvements.
 🧠 Model Used
 
 I utilize ResNet18, a deep learning model, to classify chest CT scan images. The model takes preprocessed images as input and outputs a numerical prediction value.
