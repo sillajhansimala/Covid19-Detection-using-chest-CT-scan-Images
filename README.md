@@ -35,6 +35,7 @@ HTML, CSS, JavaScript (Frontend)
 
 ### 4. Project Documentation
 - **`README.md`**: This file contains the documentation for the project, explaining the purpose, setup instructions, technologies used, and future improvements.
+
 🧠 Model Used
 
 I utilize ResNet18, a deep learning model, to classify chest CT scan images. The model takes preprocessed images as input and outputs a numerical prediction value.
