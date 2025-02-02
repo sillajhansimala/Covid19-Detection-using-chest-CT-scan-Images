@@ -1,65 +1,55 @@
-# Covid19-Detection-using-chest-CT-scan-Images
-# COVID-19 Detection Using CT Scan Images
+COVID-19 Detection Using Chest CT Scan Images
 
-## 📌 Overview
-This project aims to develop a deep learning-based model for detecting COVID-19 from CT scan images. The system leverages convolutional neural networks (CNNs) to classify CT images into COVID-19 positive and negative cases.
+Project Overview
 
-## ✨ Features
-- ✅ Automatic detection of COVID-19 using CT scan images
-- ✅ Deep learning-based classification using CNNs
-- ✅ Preprocessing techniques to enhance image quality
-- ✅ Performance evaluation using accuracy, precision, recall, and F1-score
+This project aims to detect COVID-19 using chest CT scan images by leveraging deep learning techniques. We use a Convolutional Neural Network (CNN) model to classify images and provide predictions based on the input data.
 
-## 📂 Dataset
-The dataset consists of labeled CT scan images, categorized as:
-- 🦠 COVID-19 Positive
-- ❌ COVID-19 Negative
+Technologies Used
 
-Ensure that the dataset is properly preprocessed before training.
+Python
 
-## 🛠 Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/covid19-detection-ct.git
-   cd covid19-detection-ct
-   ```
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+Flask (Backend API)
 
-## 🚀 Usage
-1. Prepare the dataset and place it in the `data` directory.
-2. Train the model:
-   ```bash
-   python train.py
-   ```
-3. Evaluate the model:
-   ```bash
-   python evaluate.py
-   ```
-4. Perform inference on new images:
-   ```bash
-   python predict.py --image path/to/image
-   ```
+OpenCV (Image Processing)
 
-## 🏗 Model Architecture
-The model uses a CNN-based architecture with multiple convolutional layers, batch normalization, and dropout to prevent overfitting.
+NumPy
 
-## 📊 Results
-The model achieves high accuracy in detecting COVID-19 from CT images. Evaluation metrics include:
-- 📈 Accuracy
-- 🎯 Precision
-- 🔁 Recall
-- 📉 F1-score
+PyTorch (Deep Learning Framework)
 
-## 🤝 Contributing
-Contributions are welcome! Feel free to submit issues or pull requests.
+ResNet18 (Pre-trained CNN Model)
 
-## 📜 License
-This project is licensed under the MIT License.
+HTML, CSS, JavaScript (Frontend)
 
-## 🙏 Acknowledgments
-- 🏥 Researchers who provided the CT scan datasets
-- 🛠 Open-source deep learning frameworks used in the project
+Project Structure
 
+Covid19-detection-using-chest-images/
+│-- backend/
+│   ├── app.py  # Flask backend to handle requests
+│   ├── model.py  # Loads and defines the CNN model
+│   ├── preprocess.py  # Preprocesses input images
+│   ├── model_weights.yaml  # Model weights for ResNet18
+│   ├── requirements.txt  # Dependencies
+│-- frontend/
+│   ├── index.html  # Frontend UI
+│   ├── scripts.js  # JavaScript functionality
+│   ├── styles.css  # Styling for the frontend
+│-- dataset/
+│   ├── images/  # Raw CT scan images
+│   ├── preprocessed_images/  # Processed images
+│-- README.md  # Project Documentation
+
+Model Used
+
+We utilize ResNet18, a deep learning model, to classify chest CT scan images. The model takes preprocessed images as input and outputs a numerical prediction value.
+
+Prediction Output
+
+The model provides a numerical output such as 733, 250, 323, etc. This value needs to be mapped to a meaningful classification, such as "COVID Positive" or "COVID Negative," in future updates.
+
+Future Improvements
+
+Implement a threshold-based classification to return "COVID Positive" or "COVID Negative."
+
+Improve frontend UI for better user experience.
+
+Enhance preprocessing techniques for better model accuracy.
